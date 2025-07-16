@@ -8,7 +8,6 @@ using Random = UnityEngine.Random;
 public class InventoryManager : MonoBehaviour
 {
   private Inventory inventory;
-  private SaveManager saveManager;
 
   private int coins;
 
@@ -27,10 +26,9 @@ public class InventoryManager : MonoBehaviour
   //===============================
 
   [Inject]
-  private void Construct(Inventory parInventory, SaveManager parSaveManager)
+  private void Construct(Inventory parInventory)
   {
     inventory = parInventory;
-    saveManager = parSaveManager;
   }
 
   //===============================
